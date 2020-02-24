@@ -1,0 +1,17 @@
+{
+  "name": "example-graalvm-javascript-jmx",
+  "version": "1.0.1",
+  "license": "UNLICENSED",
+  "description": "JavaScript NodeJS application reporting metrics to JMX in-process using GraalVM",
+  "scripts": {
+    "clean": "rm -rf target/*",
+    "build": "rm -rf target/classes; javac -d target/classes src/main/java/net/klymur/examples/nodejs/jmx1/*.java",
+    "start": "node --jvm --polyglot --vm.classpath=target/classes $JMX_OPTIONS $ADDITIONAL_OPTIONS src/main/javascript/server.js",
+    "startWithJmx": "JMX_OPTIONS=\"--vm.Dcom.sun.management.jmxremote=true --vm.Dcom.sun.management.jmxremote.local.only=false --vm.Dcom.sun.management.jmxremote.authenticate=false --vm.Dcom.sun.management.jmxremote.ssl=false --vm.Djava.rmi.server.hostname=127.0.0.1 --vm.Dcom.sun.management.jmxremote.port=9999\" npm run start",
+    "debugWithJmx": "ADDITIONAL_OPTIONS=\"--inspect=10001\" npm run startWithJmx"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "nconf": "^0.10.0"
+  }
+}
