@@ -4,7 +4,7 @@ This repository contains the code for a demo application for demonstrating repor
 
 ## Prerequisite Installations
 * [asdf](https://github.com/asdf-vm)
-* GraalVM plugin for `asdf`
+* GraalVM plugin for `asdf` (`asdf plugin add graalvm`)
 
 ## Preparation
 
