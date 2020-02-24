@@ -1,0 +1,33 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "cwd": "${workspaceRoot}",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/main/javascript/server.js",
+            "runtimeArgs": [
+                "--jvm",
+                "--polyglot",
+                "--vm.classpath=target/classes",
+                "--vm.Dcom.sun.management.jmxremote=true",
+                "--vm.Dcom.sun.management.jmxremote.local.only=false",
+                "--vm.Dcom.sun.management.jmxremote.authenticate=false",
+                "--vm.Dcom.sun.management.jmxremote.ssl=false",
+                "--vm.Djava.rmi.server.hostname=127.0.0.1",
+                "--vm.Dcom.sun.management.jmxremote.port=9999",
+                "--nolazy"
+            ],
+            "env": {
+            },
+            "outputCapture": "std"
+        }
+    ]
+}
