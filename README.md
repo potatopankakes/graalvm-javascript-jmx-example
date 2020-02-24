@@ -4,8 +4,7 @@ This repository contains the code for a demo application for demonstrating repor
 
 ## Prerequisite Installations
 * [asdf](https://github.com/asdf-vm)
-  * GraalVM plugin for `asdf`
-* Run `asdf install` to install the correct GraalVM (as well as, NodeJS and Java)
+* GraalVM plugin for `asdf`
 
 ## Preparation
 
@@ -13,6 +12,7 @@ Download or clone this repository:
 ```
 git clone git@github.com:potatopankakes/graalvm-javascript-jmx-example.git
 cd graalvm-javascript-jmx-example
+asdf install
 ```
 
 Install the npm packages for nodejs:
