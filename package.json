@@ -11,7 +11,7 @@
     "debugWithJmx": "ADDITIONAL_OPTIONS=\"--inspect=10001\" npm run startWithJmx"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "nconf": "^0.10.0"
   }
 }
